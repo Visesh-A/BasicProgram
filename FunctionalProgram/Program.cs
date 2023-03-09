@@ -10,7 +10,8 @@ namespace FunctionalPrograms
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("Choose an option to execute\n1.Flip coin \n2.Leap Year \n3.Power Of 2 \n4.Harmonic Number \n5.Prime Factor \n6.Exit");
+                Console.WriteLine("Choose an option to execute\n1.Flip coin \n2.Leap Year \n3.Power Of 2 \n4.Harmonic Number " +
+                    "\n5.Prime Factor \n6.Quotient and Remainder \n7.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -44,8 +45,15 @@ namespace FunctionalPrograms
                         PrimeFactor primeFactor = new PrimeFactor();
                         primeFactor.Prime(fact);
                         break;
-
                     case 6:
+                        Console.WriteLine("Enter Dividend value");
+                        int divi = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Enter Diviser value");
+                        int dend = Convert.ToInt32(Console.ReadLine());
+                        QuotientRemainder quotientRemainder = new QuotientRemainder();
+                        quotientRemainder.Quot(divi, dend);
+                        break;
+                    case 7:
                         flag = false;
                         break;
                 }
