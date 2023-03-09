@@ -11,7 +11,7 @@ namespace FunctionalPrograms
             while (flag)
             {
                 Console.WriteLine("Choose an option to execute\n1.Flip coin \n2.Leap Year \n3.Power Of 2 \n4.Harmonic Number " +
-                    "\n5.Prime Factor \n6.Quotient and Remainder \n7.Swap Number \n8.Exit");
+                    "\n5.Prime Factor \n6.Quotient and Remainder \n7.Swap Number \n8.Even or Odd \n9.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -62,6 +62,12 @@ namespace FunctionalPrograms
                         swap.swap(num1, num2);
                         break;
                     case 8:
+                        Console.WriteLine("Enetr a number");
+                        int b = Convert.ToInt32(Console.ReadLine());
+                        EvenOdd evenOdd = new EvenOdd();
+                        evenOdd.Even(b);
+                        break;
+                    case 9:
                         flag = false;
                         break;
                 }
