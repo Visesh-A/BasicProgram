@@ -11,7 +11,7 @@ namespace FunctionalPrograms
             while (flag)
             {
                 Console.WriteLine("Choose an option to execute\n1.Flip coin \n2.Leap Year \n3.Power Of 2 \n4.Harmonic Number " +
-                    "\n5.Prime Factor \n6.Quotient and Remainder \n7.Exit");
+                    "\n5.Prime Factor \n6.Quotient and Remainder \n7.Swap Number \n8.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -54,6 +54,14 @@ namespace FunctionalPrograms
                         quotientRemainder.Quot(divi, dend);
                         break;
                     case 7:
+                        Console.WriteLine("Enetr x value");
+                        int num1 = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Enter y value");
+                        int num2 = Convert.ToInt32(Console.ReadLine());
+                        Swap swap = new Swap();
+                        swap.swap(num1, num2);
+                        break;
+                    case 8:
                         flag = false;
                         break;
                 }
