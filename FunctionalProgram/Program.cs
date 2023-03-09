@@ -11,7 +11,7 @@ namespace FunctionalPrograms
             while (flag)
             {
                 Console.WriteLine("Choose an option to execute\n1.Flip coin \n2.Leap Year \n3.Power Of 2 \n4.Harmonic Number " +
-                    "\n5.Prime Factor \n6.Quotient and Remainder \n7.Swap Number \n8.Even or Odd \n9.Vowel and Consonent \n10.Exit");
+                    "\n5.Prime Factor \n6.Quotient and Remainder \n7.Swap Number \n8.Even or Odd \n9.Vowel and Consonent \n10.Largest Number \n11.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -74,6 +74,16 @@ namespace FunctionalPrograms
                         vowelsCons.conso(ch);
                         break;
                     case 10:
+                        Console.WriteLine(" Enter first value");
+                        int first = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Enter second value");
+                        int second = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Enter third value");
+                        int third = Convert.ToInt32(Console.ReadLine());
+                        LargestNum largestNum = new LargestNum();
+                        largestNum.Largest(first, second, third);
+                        break;
+                    case 11:
                         flag = false;
                         break;
                 }
