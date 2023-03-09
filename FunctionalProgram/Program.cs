@@ -10,7 +10,7 @@ namespace FunctionalPrograms
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("Choose an option to execute\n1.Flip coin \n2.Leap Year \n3.Exit");
+                Console.WriteLine("Choose an option to execute\n1.Flip coin \n2.Leap Year \n3.Power Of 2 \n4.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -27,6 +27,12 @@ namespace FunctionalPrograms
                         year.Leap(lee);
                         break;
                     case 3:
+                        Console.WriteLine("Enter Power value");
+                        int power = Convert.ToInt32(Console.ReadLine());
+                        PowerOf2 powerof = new PowerOf2();
+                        powerof.Power(power);
+                        break;
+                    case 4:
                         flag = false;
                         break;
                 }
